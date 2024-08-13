@@ -1,7 +1,6 @@
 package com.itheima.test6;
 
-public class Test2 {
-
+public class Test3 {
     public static void main(String[] args) {
         /*定义一个长度为三的数组，数组存储1-3名学生对象作为初始数据，学生对象的学号，姓名各不相同
          * 学生的属性：学号，姓名，年龄
@@ -23,29 +22,23 @@ public class Test2 {
         arr[1] = stu2;
         arr[2] = stu3;
 
-        /*要求3：通过id删除学生信息
-         * 如果存在，则删除，不存在，则提示删除失败
-        * */
+        //  * 要求5：查询数组id为"2"的学生，如果存在，则将ta的年龄+1
         int index = index(arr, 2);
         if(index>0){
-            //如果存在，则删除
-            arr[index]=null;
-            print(arr);
-        }else {
-            //删除失败
-            System.out.println("id不存在，删除失败");
+            Student stu= arr[index];
+            stu.setAge(stu.getAge()+1);
         }
-
+        print(arr);
 
     }
-    /* 要求3：通过id删除学生信息
-               如果存在，则删除，不存在，则提示删除失败。 */
+    //判断学生是否存在
     public static int index(Student[] arr, int id){
         for (int i = 0; i < arr.length; i++) {
             Student stu = arr[i];
             if(stu!=null){
                 int id1 = stu.getId();
                 if(id==id1){
+                    //返回索引数
                     return i;
                 }
             }
@@ -59,9 +52,6 @@ public class Test2 {
             if(arr[i]!=null){
                 System.out.println(arr[i].getId()+", "+arr[i].getName()+", "+arr[i].getAge());
             }
-
         }
-
     }
-
 }
