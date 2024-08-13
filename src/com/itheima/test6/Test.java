@@ -16,11 +16,11 @@ public class Test {
         //创建学生对象
         Student stu1= new Student(1,"李锦",20);
         Student stu2= new Student(2,"韩珂欣",20);
-//        Student stu3= new Student(3,"刘晶晶",22);
+        Student stu3= new Student(3,"刘晶晶",22);
         //将学生对象存到数组中
         arr[0] = stu1;
         arr[1] = stu2;
-//        arr[2] = stu3;
+        arr[2] = stu3;
 
         //要求1：再添加一个学生对象，并且在添加的时候判断学生学号的唯一性
         Student stu4=new Student(4,"蔺亚楠",21);
@@ -52,7 +52,7 @@ public class Test {
                 for (int i = 0; i < newArr.length; i++) {
                     System.out.println(newArr[i].getId()+", "+newArr[i].getName()+", "+newArr[i].getAge());
                 }*/
-                print(newArr);
+
 
             }else{
                 //数组未满--直接添加
@@ -62,9 +62,11 @@ public class Test {
                /* for (int i = 0; i < arr.length; i++) {
                     System.out.println(arr[i].getId()+", "+arr[i].getName()+", "+arr[i].getAge());
                 }*/
-                print(arr);
+//                print(arr);
             }
         }
+
+
     }
     //要求2：遍历所有的学生信息
     public static void print(Student[] arr){
@@ -121,4 +123,7 @@ public class Test {
         //当循环结束后，还没有找到一样的数字，那么表示要查找的id是不存在的
         return false;
     }
+
+    //删除学生信息
+
 }
